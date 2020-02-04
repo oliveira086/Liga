@@ -47,7 +47,7 @@ JBS3 / -0,41% / R$ 2,99''')
 	    draw.text((200, 1010), '{}'.format(ativoNove), (0, 0, 0), font=font)
 	    draw.text((430, 1010), '{}'.format(ativoDez), (0, 0, 0), font=font)
 		
-	    img.save('balanço.jpg')
+	    img.save('pronto.jpg')
 	
     if '>' in msg['text']:
 	    mensagem = msg['text']
@@ -82,7 +82,7 @@ JBS3 / -0,41% / R$ 2,99''')
 		
 		
 	    url = "https://api.telegram.org/bot552538744:AAE5r1s7wRAHrdxHq6xYWUcRLnfVgar3xQo/sendPhoto";
-	    files = {'photo': open('balanço.jpg', 'rb')}
+	    files = {'photo': open('pronto.jpg', 'rb')}
 	    data = {'chat_id' : chat_id}
 	    r= requests.post(url, files=files, data=data)
 	    print(r.status_code, r.reason, r.content)
