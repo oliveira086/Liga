@@ -1,3 +1,6 @@
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
 import telepot
 from telepot.loop import MessageLoop
 import sys
@@ -14,14 +17,29 @@ def handle(msg):
         lista = [
         {
             'ativo': mensagemTratada[0],
-            'posicao': '95, 350',
+            'posicao': [90, 350],
             'porcetagem': mensagemTratada[10],
             'posicaoPorcentagem': '80, 405',
         },
+        {
+            'ativo': mensagemTratada[1],
+            'posicao': [310, 350],
+            'porcetagem': mensagemTratada[11],
+            'posicaoPorcentagem': '310, 405',
+        },
         ]
 
-        print(lista[0])
         
+
+        for i in range(1):
+            imagem = Image.open('fundo.jpg')
+            draw = ImageDraw.Draw(imagem)
+            font = ImageFont.truetype("arial.ttf", 30)
+
+            draw.text((lista[i]['posicao'][0],lista[i]['posicao'][1]), '{}'.format(lista[i]['ativo']), (12, 12, 12), font=font)
+            draw.text((lista[i]['posicaoPorcentagem'][0],lista[i]['posicaoPorcentagem'][1]), '{}'.format(lista[i]['porcetagem']), (12, 12, 12), font=font)
+
+        imagem.save('pronto.jpg')
 
 
 MessageLoop(bot, handle).run_as_thread()
