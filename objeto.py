@@ -11,6 +11,10 @@ def handle(msg):
         mensagemRecebida = msg['text'][1:]
 
         mensagemTratada = mensagemRecebida.split(',')
+    
+    if '>' in msg['text']:
+        mensagemRecebidaPorcentagem = msg['text'][1:0]
+        mensagemTratadaPorcentagem = mensagemRecebidas.split('/')
         
 
 
