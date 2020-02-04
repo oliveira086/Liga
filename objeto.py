@@ -7,8 +7,9 @@ bot = telepot.Bot('552538744:AAE5r1s7wRAHrdxHq6xYWUcRLnfVgar3xQo')
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
 
-    if msg['text'] == '/':
-        print(msg)
+    if '/' in msg['text']:
+        mensagem = msg['text']
+        print(mensagem[1:])
 
 
 MessageLoop(bot, handle).run_as_thread()
@@ -17,3 +18,4 @@ print ('Online')
 while 1:
     time.sleep(10)
 	
+

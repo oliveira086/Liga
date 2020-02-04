@@ -18,7 +18,7 @@ JBS3 / -0,41% / R$ 2,99''')
     if '/' in msg['text']:
 	    mensagem = msg['text']
 	    #print(mensagem)
-		#=== Recortar a string e armzenar valores =====
+		#=== Recortar a string e armazenar valores =====
 	    ativoUm = mensagem[1:6]
 	    ativoDois = mensagem[7:12]
 	    ativoTres = mensagem[13:18]
