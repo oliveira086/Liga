@@ -1,5 +1,7 @@
 import telepot
 from telepot.loop import MessageLoop
+import sys
+import time
 
 bot = telepot.Bot('552538744:AAE5r1s7wRAHrdxHq6xYWUcRLnfVgar3xQo')
 def handle(msg):
