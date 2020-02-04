@@ -9,14 +9,18 @@ def handle(msg):
 
     if '/' in msg['text']:
         mensagemRecebida = msg['text'][1:]
-        mensagemTratada = mensagemRecebida.split(',')
-    
-    if '>' in msg['text']:
-        mensagemRecebidaPorcentagem = msg['text'][1:]
-        mensagemTratadaPorcentagem = mensagemRecebidaPorcentagem.split('/')
+        mensagemTratada = mensagemRecebida.split('/')
 
-    if '!' in msg['text']:
-        pass
+        lista = [
+        {
+            'ativo': mensagemTratada[0],
+            'posicao': '95, 350',
+            'porcetagem': mensagemTratada[10],
+            'posicaoPorcentagem': '80, 405',
+        },
+        ]
+
+        print(lista[0])
         
 
 
@@ -26,4 +30,6 @@ print ('Online')
 while 1:
     time.sleep(10)
 	
+
+
 
