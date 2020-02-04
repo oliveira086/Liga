@@ -78,7 +78,7 @@ JBS3 / -0,41% / R$ 2,99''')
 	    draw.text((200, 1070), '{}'.format(porcentagemNove), (255,0,0), font=font)
 	    draw.text((420, 1070), '{}'.format(porcentagemDez), (255,0,0), font=font)
 	    
-	    img.save('balanço.jpg')
+	    img.save('pronto.jpg')
 		
 		
 	    url = "https://api.telegram.org/bot552538744:AAE5r1s7wRAHrdxHq6xYWUcRLnfVgar3xQo/sendPhoto";
