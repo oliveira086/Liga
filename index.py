@@ -12,7 +12,8 @@ def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
 
     if msg['text'] == 'start':
-	    bot.sendMessage(chat_id,'''Digite a lista de ativos que desejas adicionar, contendo as seguintes informações: ID do ativo, porcetagem (alta ou baixa) e a sua cotação atual, exemplo:
+	    bot.sendMessage(chat_id,'''Digite a lista de ativos que desejas adicionar, contendo as seguintes informações:
+		 ID do ativo, porcetagem (alta ou baixa) e a sua cotação atual, exemplo:
 PETRA3 / +1,41% / R$ 12,99
 JBS3 / -0,41% / R$ 2,99''')
     if '/' in msg['text']:

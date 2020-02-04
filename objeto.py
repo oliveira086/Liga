@@ -8,8 +8,10 @@ def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
 
     if '/' in msg['text']:
-        mensagem = msg['text']
-        print(mensagem[1:])
+        mensagemRecebida = msg['text']
+
+        mensagemTratada = mensagemRecebida.split()
+        print(mensagemRecebida[1:])
 
 
 MessageLoop(bot, handle).run_as_thread()
