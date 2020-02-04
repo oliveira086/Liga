@@ -9,12 +9,14 @@ def handle(msg):
 
     if '/' in msg['text']:
         mensagemRecebida = msg['text'][1:]
-
         mensagemTratada = mensagemRecebida.split(',')
     
     if '>' in msg['text']:
-        mensagemRecebidaPorcentagem = msg['text'][1:0]
-        mensagemTratadaPorcentagem = mensagemRecebidas.split('/')
+        mensagemRecebidaPorcentagem = msg['text'][1:]
+        mensagemTratadaPorcentagem = mensagemRecebidaPorcentagem.split('/')
+
+    if '!' in msg['text']:
+        pass
         
 
 
