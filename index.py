@@ -30,8 +30,8 @@ JBS3 / -0,41% / R$ 2,99''')
 	    ativoNove = mensagem[49:54]
 	    ativoDez = mensagem[55:60]
 	    
-	    img = Image.open("fundo.jpg")
-	    draw = ImageDraw.Draw(img)
+	    IMAGEM = Image.open("fundo.jpg")
+	    draw = ImageDraw.Draw(IMAGEM)
 		# font = ImageFont.truetype(<font-file>, <font-size>)
 	    font = ImageFont.truetype("arial.ttf", 30)
 		
